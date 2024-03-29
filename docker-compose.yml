@@ -14,9 +14,6 @@
       - ./requirements.txt:/kinderneutron/requirements.txt
    
    psql-db:
-    build:
-       context: ./
-       dockerfile: ./Patches/SQL/Dockerfile
     image: 'postgres:14'
     container_name: psql-db
     environment:

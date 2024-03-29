@@ -1,0 +1,12 @@
+type ErrorLog {
+  id: ID!
+  user_id: Int!
+  error_type: String!
+  message: String!
+  created_at: String!
+  updated_at: String!
+}
+
+type Query {
+  getErrorLog(id: ID!): ErrorLog
+}

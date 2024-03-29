@@ -8,6 +8,8 @@ FROM python:3.10.2-alpine3.15
   # Install requirements
   RUN pip install --upgrade pip
   RUN pip install Django psycopg2==2.9.3
+  COPY ../requirements.txt .
+  RUN pip install -r requirements.txt
   # Create directories  
   RUN mkdir -p /root/workspace/src
   COPY ./  /root/kinderneutron
