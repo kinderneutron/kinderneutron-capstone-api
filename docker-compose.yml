@@ -3,10 +3,12 @@
      build:
        context: ./
        dockerfile: ./dockerfiles/Dockerfile
-     image: kinderneutronimage
-     container_name: kinderneutron_container
+     image: kinderneutron_api_image
+     container_name: kinderneutron_api_container
      stdin_open: true #  docker attach container_id
      tty: true
+     devices:
+      - /dev/video0:/dev/video0
      ports:
       - "8000:8000"
      volumes:
