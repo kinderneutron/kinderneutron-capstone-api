@@ -3,8 +3,8 @@
      build:
        context: ./
        dockerfile: ./dockerfiles/Dockerfile
-     image: kinderneutronimage
-     container_name: kinderneutron_container
+     image: kinderneutron_api_image
+     container_name: kinderneutron_api_container
      stdin_open: true #  docker attach container_id
      tty: true
      ports:
