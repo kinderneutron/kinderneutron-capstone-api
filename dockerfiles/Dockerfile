@@ -15,13 +15,13 @@ RUN apt-get update && \
   RUN pip install --upgrade pip
   RUN pip install --upgrade pip setuptools wheel
   RUN pip install Django
+
   RUN pip install psycopg2-binary
   RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
   # RUN apt-get update && apt-get install -y \
   #   libsm6 \
   #   libxext6 \
   #   libxrender-dev
-
 # Install OpenCV using pip
   RUN pip install opencv-python
   COPY ../requirements.txt .
