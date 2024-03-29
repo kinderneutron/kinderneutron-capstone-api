@@ -20,6 +20,6 @@ from django.urls import path,include
 urlpatterns = [
     path('errorlogapi/',include('error_log_api.urls')),
     path('detectionapi/',include('detectionapi.urls')),
-
+    path('videostreamapi/',include('video_stream.urls')),
     path('admin/', admin.site.urls),
 ]

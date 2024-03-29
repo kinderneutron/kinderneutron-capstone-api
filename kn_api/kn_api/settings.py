@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'error_log_api',
-    'detectionapi'
+    'detectionapi',
+    'video_stream'
 ]
 
 MIDDLEWARE = [
