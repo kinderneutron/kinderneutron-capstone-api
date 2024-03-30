@@ -21,7 +21,7 @@ def get_my_data():
     # Assuming you've already configured your database settings
     conn = Kinderneutron.connect_db()
     cursor = conn.cursor()
-    cursor.execute("SELECT id, username, device_name,login_time,updated_at FROM Device")
+    cursor.execute("SELECT id, username, device_name,login_time,updated_at FROM device")
     records = cursor.fetchall()
     cursor.close()
     conn.close()
