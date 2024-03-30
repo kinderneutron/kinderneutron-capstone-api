@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'error_log_api',
     'detectionapi',
-    'video_stream'
+    'video_stream',
+    'device_detection_api'
 ]
 
 MIDDLEWARE = [
