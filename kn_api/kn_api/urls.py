@@ -21,5 +21,6 @@ urlpatterns = [
     path('errorlogapi/',include('error_log_api.urls')),
     path('detectionapi/',include('detectionapi.urls')),
     path('videostreamapi/',include('video_stream.urls')),
+    path('device_detection_api/',include('device_detection_api.urls')),
     path('admin/', admin.site.urls),
 ]
