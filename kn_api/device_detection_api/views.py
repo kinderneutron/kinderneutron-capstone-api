@@ -2,7 +2,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from Databases import Kinderneutron
 import psycopg2
-from .serializers import ErrorLogSerializer
+from .serializers import DeviceSerializer
 # Create your views here.
 @api_view(['GET','POST'])
 def my_data_view(request):
@@ -13,7 +13,7 @@ def my_data_view(request):
         for record in raw_data
     ]
     
-    serializer = ErrorLogSerializer(data, many=True)
+    serializer = DeviceSerializer(data, many=True)
     return Response(serializer.data)
 
 
@@ -21,7 +21,7 @@ def get_my_data():
     # Assuming you've already configured your database settings
     conn = Kinderneutron.connect_db()
     cursor = conn.cursor()
-    cursor.execute("SELECT id, username, device_name,login_time,updated_at FROM error_log")
+    cursor.execute("SELECT id, username, device_name,login_time,updated_at FROM Device")
     records = cursor.fetchall()
     cursor.close()
     conn.close()
